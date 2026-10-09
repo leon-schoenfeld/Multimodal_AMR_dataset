@@ -341,8 +341,8 @@ each dataset frame to its corresponding sensor measurements and preceding frames
 
 # Evaluation and Challenge
 
-The [SEW Multimodal AMR Safety Challenge](./index.html) evaluates object-detection methods by their safety and productivity on the test set. It evaluates the safety, productivity, and combined performance at a range of up to 2.5 m and 10 m from the AMR. The benchmark page describes the submission process and provides the current leaderboard.
-A description of the evaluation methodology is provided in the bottom section of the [leaderboard](./index.html).
+The [SEW Multimodal AMR Safety Challenge](https://leon-schoenfeld.github.io/Multimodal_AMR_dataset/) evaluates object-detection methods by their safety and productivity on the test set. It evaluates the safety, productivity, and combined performance at a range of up to 2.5 m and 10 m from the AMR. The benchmark page describes the submission process and provides the current leaderboard.
+A description of the evaluation methodology is provided in the bottom section of the [leaderboard](https://leon-schoenfeld.github.io/Multimodal_AMR_dataset/).
 The benchmark treats persons, bicycles, dolls, and slide cars as non-traversable, while curbs and vegetation are traversable. The performance score combines safety and productivity, emphasizes dangerous failures while retaining productivity.
 
 # Discussion

@@ -270,11 +270,6 @@
   <header>
     <div>
       <h1>SEW Multimodal AMR Safety Challenge</h1>
-      <p class="sub">
-        Detection on an autonomous mobile robot, scored the way the robot experiences it:
-        how much of every safety-relevant object you actually cover, and how much driveable
-        floor you give up to do it.
-      </p>
       <p class="meta" id="meta"></p>
     </div>
     <button class="theme" id="theme" type="button" title="Toggle light / dark" aria-label="Toggle light / dark">
@@ -916,7 +911,7 @@ if (!DATA) {
 } else {
   $("meta").innerHTML =
     `${DATA.entries.length} evaluated ${DATA.entries.length === 1 ? "submission" : "submissions"} · ` +
-    `updated ${esc(DATA.generated)} · ranked by <code>Performance = Productivity &middot log-penalty(DF/object)</code>`;
+    `updated ${esc(DATA.generated)} · ranked by the performance score`;
   $("footer").innerHTML =
     `Raw data: ` +
     `<a href="data.json">data.json</a>`;

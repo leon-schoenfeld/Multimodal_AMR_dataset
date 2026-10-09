@@ -7,7 +7,7 @@
 # Adjust `base_dir` to your KITTI root and run:
 #     python SEW_Dataset_Viewer.py --config config_kitti.yaml
 
-base_dir: /path/to/dataset/
+base_dir: /your/path/to/Kitti_Dataset/
 
 label_folder:          data_object_label_2/training/label_2
 calib_folder:          data_object_calib/training/calib

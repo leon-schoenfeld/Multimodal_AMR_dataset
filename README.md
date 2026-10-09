@@ -329,7 +329,8 @@ SEW_Dataset/
         ├── pub_1/
         └── pub_4/
 
-    The preceding-frame folders use the same modality layout with prefixes 31-33, 41-43, 51-53, 61-63, 71-73, and 81-83.
+    The preceding-frame folders use the same modality layout with prefixes 
+    31-33, 41-43, 51-53, 61-63, 71-73, and 81-83.
 ```
 
 The radar `images/` directory contains azimuth, elevation, and Doppler images

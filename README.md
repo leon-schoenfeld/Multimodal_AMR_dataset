@@ -9,8 +9,8 @@ This repository contains the documentation of our multimodal autonomous mobile r
 
 ## TL;DR
 
-The datasets consists of synchronized and labeled key frames
-from: an RGB, thermal and TOF camera, 2x 2D laser
+The dataset consists of synchronized and labeled key frames
+from: an RGB, thermal and ToF camera, two 2D laser
 scanner, a radar sensor, and an ultrasonic array. For each key
 frame, the dataset provides:
 
@@ -21,7 +21,7 @@ frame, the dataset provides:
 - Metadata for domain, weather and lighting conditions
 
 Preceding each key frame, every sensor has up to 3 previous unlabeled frames. All labels, metadata, calibration files, sensor data, and preceding frames have the same 6 digit number as the corresponding key frame. 
-The dataset is split in 10k train frames, 2.7k validation frames and 3.2k test frames. To enter our benchmark, mail us [SEW-Dataset@sew-eurodrive.de](mailto:SEW-Dataset@sew-eurodrive.de) your predictions of one or multiple modalities of the test set. We will publish the results on the [leaderboard](https://leon-schoenfeld.github.io/Multimodal_AMR_dataset/).
+The dataset is split in 10k train frames, 2.7k validation frames and 3.2k test frames. To participate in the benchmark, send your predictions to [SEW-Dataset@sew-eurodrive.de](mailto:SEW-Dataset@sew-eurodrive.de) your predictions of one or multiple modalities of the test set. We will publish the results on the [leaderboard](https://leon-schoenfeld.github.io/Multimodal_AMR_dataset/).
 
 <p align="center">
   <img src="./images/sew_dataset_overview.gif" alt="Synchronized multimodal sensor views from the SEW Multimodal AMR Dataset" width="2800">
@@ -51,7 +51,7 @@ Before launching, adapt `base_dir` in [`config_sew.yaml`](./utils/SEW_Dataset_Vi
 python SEW_Dataset_viewer.py --config config_kitti.yaml
 ```
 
-Both configurations use KITTI-style calibration transformations such as `Tr_velo_to_cam` to project the point cloud into the camera views. The sensor coordinate systems and transformation layout are illustrated in following figure.
+Both configurations use KITTI-style calibration transformations such as `Tr_velo_to_cam` to project the point cloud into the camera views. The sensor coordinate systems and transformation layout are illustrated in the following figure.
 
 <p align="center">
   <img src="./images/AMR_CoordinateTransform.png">
@@ -72,7 +72,7 @@ Both configurations use KITTI-style calibration transformations such as `Tr_velo
   - [Thermal Camera](./sensors_and_calibration/thermal/thermal.md)
   - [Radar sensor](./sensors_and_calibration/radar/radar.md)
 - [Metadata](#meta-data)
-- [Recording and Synchronisation](#recording-and-synchronisation)
+- [Recording and Synchronization](#recording-and-synchronization)
 - [Labels](#labels)
 - [Evaluation and Challenge](#evaluation-and-challenge)
 - [Leaderboard](./benchmark/index.html)
@@ -84,7 +84,7 @@ Both configurations use KITTI-style calibration transformations such as `Tr_velo
 The contributions of this dataset are as follows:
 
 - First dataset that includes RGB images, thermal images, radar data, ultrasonic data, ToF 3D point clouds, NIR images, 2D laser scanner range measurements, and metadata.
-- 15,921 synchronized key frames across all modalities: approximately 10k training, 2,7k validation, and 3,2k test frames. The training and validation frames are labeled in 3D and 2D. The test labels are withheld for evaluation. The timestamps of the modalities in each key frame differ by less than 40 ms.
+- 15,921 synchronized key frames across all modalities: approximately 10k training, 2.7k validation, and 3.2k test frames. The training and validation frames are labeled in 3D and 2D. The test labels are withheld for evaluation. The timestamps of the modalities in each key frame differ by less than 40 ms.
 - Challenging and diverse scenes in industrial indoor environments and in urban outdoor environments, including many edge cases and severe weather and lighting conditions.
 - We enable statistical evaluation of safety and productivity of AMRs in different modalities and domains.
 
@@ -109,7 +109,7 @@ Regardless of the sensing modality, each sensor or detector combination has limi
 To overcome these challenges, we propose a multi-modal sensor fusion approach. By combining different sensing modalities,
 we aim to eliminate common-cause failures and enhance the robustness of object detection and classification in diverse environments.
 
-Our greater goal is to achieve safe AMRs in outdoor applications, more flexible safety in industrial human-robot collaborations and reduced overall cost.
+Our ultimate goal is to enable safe AMRs in outdoor applications, more flexible safety in industrial human-robot collaborations and reduced overall cost.
 We therefore compare object classification and localization methods in the different modalities.
 We want to evaluate the safety and productivity of each modality, depending on the domain (industrial indoor or European urban outdoor), weather, and lighting conditions.
 
@@ -120,14 +120,14 @@ The abbreviation **EFEU** stands for **E**co-**F**riendly **E**xperimental **U**
 The project focuses on reducing the environmental impact of urban logistics by using AMRs for the delivery of parcels and for the collection and disposal of waste.
 Each AMR can handle two containers that can be placed in transfer docks or opened by the user with their credentials over a web application.
 Since the perception of the AMR is not safe yet, they have to be accompanied by a person with a wireless emergency stop.
-One of the five AMRs carries a sensor bracket in place of one of the containers and is therefore limited to deliveries with one container.
+One of the five AMRs is equipped with the sensor bracket in place of one of the containers and is therefore limited to deliveries with one container.
 The sensor bracket is described in the following.
 
 ![EFEU AMR](./images/EFEU_AMR2.jpg) <br>
 
 # Sensor Position and Rosbags
 
-The sensor bracket consists of a ToF camera, a RGB camera, a thermal camera, a radar array, a temperature sensor and a control cabinet. The two 2D laser scanners are integrated in the body of the AMR, as well as the ultrasonic sensor array.
+The sensor bracket consists of a ToF camera, an RGB camera, a thermal camera, a radar array, a temperature sensor and a control cabinet. The two 2D laser scanners are integrated in the body of the AMR, as well as the ultrasonic sensor array.
 The control cabinet contains an _Intel UP Xtreme_ PC, a switch, and power supplies for 5V, 12V, 24V and 230V AC.
 
 | ![ToF bin coordinate system](./images/tof_bin.png) <br> ToF coordinate system for the `.bin` files. | ![AMR and sensor coordinate systems](./images/AMR_3D_coordinatesystem.png) <br> AMR and sensor coordinate-system representation. |
@@ -135,6 +135,7 @@ The control cabinet contains an _Intel UP Xtreme_ PC, a switch, and power suppli
 | ![Frontal view on the sensor bracket mounted on the AMR](./images/AMR_front_photo.png) <br> Frontal view on the sensor bracket mounted on the AMR. | ![Simplified CAD model of the AMR with the sensor bracket and sensor positions](./images/CAD_drawing.JPG) <br> PDF version: [EFEU AMR CAD](./images/EFEU_AMR_CAD_simplified.pdf). |
 
 Besides the technical drawing, all sensor positions and the model of the AMR are saved in [the ROS 1 URDF viewer](./utils/dataset_rosbag_viewer/ros1/urdf_viewer/).
+The sensor extrinsic calibration is shown in [Sensor calibration](./sensors_and_calibration/laserscanner.md) as transformation matrix. 
 
 ## Rosbags
 
@@ -142,7 +143,7 @@ To view the AMR with the sensors, their coordinate systems, and the rosbag senso
 
 - [ROS 1 URDF viewer](./utils/dataset_rosbag_viewer/ros1/urdf_viewer/README.md)
 
-![AMR in RVIz](./images/rviz.png) <br> Playing the Rosbag in RVIz and visualizing the two laser scanners, the ToF 3D point cloud, the RGB image, thermal image, the AMR, and all coordinate systems.
+![AMR in RViz](./images/rviz.png) <br> Playing the Rosbag in RViz and visualizing the two laser scanners, the ToF 3D point cloud, the RGB image, thermal image, the AMR, and all coordinate systems.
 
 # Sensors and Calibration
 
@@ -153,12 +154,12 @@ All information about the four ultrasonic sensors can be found in the [ultrasoni
 
 ## 2D Laser Scanner
 
-Two Sick Microscan 3 laser scanners are mounted on two diagonal opposed corners to have a 360° view of the scene without any blind spots.
+Two Sick Microscan 3 laser scanners are mounted on two diagonally opposite corners to have a 360° view of the scene without any blind spots.
 All information about the two laser scanners can be found in the [2D laser scanner documentation](./sensors_and_calibration/laserscanner/laserscanner.md).
 
 ## ToF Camera
 
-The ESPROS TOFcam660 is a 3D ToF camera the offers a dense 3D point cloud, depth images, and active NIR illuminated 2D images of the scenes.
+The ESPROS TOFcam660 is a 3D ToF camera that offers a dense 3D point cloud, depth images, and active NIR illuminated 2D images of the scenes.
 All information about the ToF camera can be found in the [ToF camera documentation](./sensors_and_calibration/tof/tof.md).
 
 ## RGB Camera
@@ -168,7 +169,7 @@ All information about the RGB camera can be found in the [RGB camera documentati
 
 ## Thermal Camera
 
-The Flir Boson 640 is a high resolution thermal camera without cooling. With high dynamic range, even small temperature gradients are visible.
+The Flir Boson 640 is a high-resolution thermal camera without cooling. With high dynamic range, even small temperature gradients are visible.
 All information about the thermal camera can be found in the [thermal camera documentation](./sensors_and_calibration/thermal/thermal.md).
 
 ## Radar Sensor
@@ -185,13 +186,13 @@ The metadata is saved as a `.txt` file for each frame with the following informa
 - Daytime: Day, Dawn, Night
 - Name of rosbag with date and time
 
-Additionally, the air temperature is saved in °C in the /08_ultrasonic/pub_1/ `.json` `"temperature": ` message of the ultrasonic sensor to compensate for the temperature dependent speed of sound.
+Additionally, the air temperature is saved in °C in the /08_ultrasonic/pub_1/ `.json` `"temperature": ` message of the ultrasonic sensor to compensate for the temperature-dependent speed of sound.
 
-# Recording and Synchronisation
+# Recording and Synchronization
 
 All scenes were recorded with ROS 1 rosbags. The bags are extracted and a key-frame data cluster with all modalities is saved if their timestamps do not differ by more than 40 ms. Up to three preceding, unlabeled frames are provided for each modality when available.
-The ToF has an offset of the timestamp, due to its long internal processing.
-The synchronizing was validated by rotating heated resistors, that were visible in all modalities, except ultrasonic.
+The ToF camera timestamps have an offset, due to the long internal processing of the camera.
+The synchronization was validated by rotating heated resistors, that were visible in all modalities, except ultrasonic.
 The ultrasonic sensors were synchronized by approaching a wall with the reference distance from the ToF camera and laser scanners.
 
 ![Time synchronization of the ros messages](./images/Synchronization.png) <br>
@@ -209,13 +210,13 @@ If a sensors has several messages in the time frame, the message closest to the 
 | 005890      | 013252    | Industrial manufacturing and research facility, indoor                                                   |
 | 016437      | 059094    | Challenging and diverse scenes including rain, snow and night, indoor and outdoor                        |
 
-To make the dataset challenging and divers and leverage detectors to better generalize, the dataset includes edge cases like:
+To improve detector generalization and make the dataset more challenging and diverse, the dataset includes edge cases like:
 
 - Several bicycle accidents, also by night and rain.
-- Persons running, jumping, hiding, sitting, lying, Doig a handstand or riding the slide car.
+- Persons running, jumping, hiding, sitting, lying, donig a handstand or riding the slide car.
 - Snow environment and snowballs, thrown at all sensors.
-- Persons lying in high grass (especially challenging for the ultrasonic and radar sensors).
-- Doll lying on cobblestone (especially challenging for the ultrasonic and radar sensors).
+- People lying in high grass (especially challenging for the ultrasonic and radar sensors).
+- A doll lying on cobblestone (especially challenging for the ultrasonic and radar sensors).
 - Complete darkness with blinding (especially challenging for the RGB camera).
 - Hot indoor environments (especially challenging for the thermal camera).
 
@@ -237,6 +238,7 @@ The dataset contains the following labels:
 - 4 vegetation (Only in 3D)
 - 5 curb (Only in 3D)
 
+The transformation of the 2D and 3D labels into the images and point clouds, as well as the projection of the point clouds and 3D labels into the images are shown in the figure below:
 ![Coordinate transformations](./images/AMR_CoordinateTransform.png) <br>
 
 ## 3D
@@ -330,9 +332,9 @@ each dataset frame to its corresponding sensor measurements and preceding frames
 
 # Evaluation and Challenge
 
-The [SEW Multimodal AMR Safety Challenge](./benchmark/index.html) evaluates object-detection methods by their safety and productivity on the test set. It evaluates the safety, productivity, and combined performance at a range of up to 2.5 m and 10 m of the AMR. The benchmark page describes the submission process and provides the current leaderboard.
+The [SEW Multimodal AMR Safety Challenge](./benchmark/index.html) evaluates object-detection methods by their safety and productivity on the test set. It evaluates the safety, productivity, and combined performance at a range of up to 2.5 m and 10 m from the AMR. The benchmark page describes the submission process and provides the current leaderboard.
 A description of the evaluation methodology is provided in the bottom section of the [leaderboard](./benchmark/index.html).
-The benchmark treats persons, bicycles, dolls, and slide cars as non-traversable, while curbs and vegetation are traversable. The performance score combines the safety and productivity, emphasizes dangerous failures while retaining productivity.
+The benchmark treats persons, bicycles, dolls, and slide cars as non-traversable, while curbs and vegetation are traversable. The performance score combines safety and productivity, emphasizes dangerous failures while retaining productivity.
 
 # Discussion
 
@@ -348,11 +350,11 @@ Therefore, no individuals under the age of 18 are included, and the doll is labe
 
 ## Label alignment
 
-The outlines of the 3D bounding boxes do not project perfectly into the 2D image space of the RGB and thermal cameras, so we manually aligned all the 2D labels for the RGB and thermal camera.
+The outlines of the 3D bounding boxes do not project perfectly onto the 2D image space of the RGB and thermal cameras, so we manually aligned all the 2D labels for the RGB and thermal camera.
 Since a beam splitter for thermal and RGB cameras is expensive, requires more space, and needs manual adjustment, there is a low chance it will be used in commercially available outdoor AMRs.
 We therefore accept poorer performance of RGB and thermal deep or early fusion in order to keep the setup simple.
 
-## Labelled curbs and vegetation
+## Labeled curbs and vegetation
 
 Radar and ultrasonic object detectors distinguish better between curbs and lying persons than between lying persons and background (no label).
 Therefore, we added curbs and vegetation to the 3D labels.
@@ -392,6 +394,6 @@ Special thanks to the labelling crew: Caleb Jia Le Gan, David Jabs, Jule Heilig,
 
 # License
 
-The contents of this documentation is licensed under the [CC-BY-4.0 license](./LICENSE.CC-BY-4.0).  
+The contents of this documentation are licensed under the [CC-BY-4.0 license](./LICENSE.CC-BY-4.0).  
 The code in [utils/demo_scripts/\*](./utils/demo_scripts/) is licensed under the [MIT license](./LICENSE.MIT).
 The dataset itself is licensed under the CC-BY-SA 4.0 license.

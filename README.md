@@ -11,11 +11,11 @@ This repository contains the documentation of our multimodal autonomous mobile r
 
 The dataset consists of synchronized and labeled key frames
 from: an RGB, thermal and ToF camera, two 2D laser
-scanner, a radar sensor, and an ultrasonic array. For each key
+scanners, a radar sensor, and an ultrasonic array. For each key
 frame, the dataset provides:
 
 - Raw and calibrated RGB, thermal, NIR and depth images
-- ToF and Radar point clouds
+- ToF and radar point clouds
 - Laser scanner, ultrasonic and radar raw data
 - 3D KITTI format and 2D YOLO (also with distance) format labels
 - Metadata for domain, weather and lighting conditions

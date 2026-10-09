@@ -4,7 +4,7 @@ This repository contains the documentation of our multimodal autonomous mobile r
 
 - [Intrinsic and extrinsic calibration files, sensor descriptions, and data formats](./sensors_and_calibration)
 - [The ROS 1 URDF viewer for the AMR and its sensors](./utils/dataset_rosbag_viewer/ros1/urdf_viewer/README.md)
-- [The safety and productivity benchmark](./benchmark/index.html)
+- [The safety and productivity benchmark](./index.html)
 - [Images of our documentation and a pdf version of the technical drawing of the sensor positions](./images)
 
 ## TL;DR
@@ -71,7 +71,6 @@ Both configurations use KITTI-style calibration transformations such as `Tr_velo
 - [Recording and Synchronization](#recording-and-synchronization)
 - [Labels](#labels)
 - [Evaluation and Challenge](#evaluation-and-challenge)
-- [Leaderboard](./benchmark/index.html)
 - [Discussion](#discussion)
 - [Download](#download)
 - [Reference and Citation](#reference-and-citation)
@@ -342,8 +341,8 @@ each dataset frame to its corresponding sensor measurements and preceding frames
 
 # Evaluation and Challenge
 
-The [SEW Multimodal AMR Safety Challenge](./benchmark/index.html) evaluates object-detection methods by their safety and productivity on the test set. It evaluates the safety, productivity, and combined performance at a range of up to 2.5 m and 10 m from the AMR. The benchmark page describes the submission process and provides the current leaderboard.
-A description of the evaluation methodology is provided in the bottom section of the [leaderboard](./benchmark/index.html).
+The [SEW Multimodal AMR Safety Challenge](./index.html) evaluates object-detection methods by their safety and productivity on the test set. It evaluates the safety, productivity, and combined performance at a range of up to 2.5 m and 10 m from the AMR. The benchmark page describes the submission process and provides the current leaderboard.
+A description of the evaluation methodology is provided in the bottom section of the [leaderboard](./index.html).
 The benchmark treats persons, bicycles, dolls, and slide cars as non-traversable, while curbs and vegetation are traversable. The performance score combines safety and productivity, emphasizes dangerous failures while retaining productivity.
 
 # Discussion

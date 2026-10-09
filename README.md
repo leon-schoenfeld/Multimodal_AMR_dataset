@@ -4,7 +4,7 @@ This repository contains the documentation of our multimodal autonomous mobile r
 
 - [Intrinsic and extrinsic calibration files, sensor descriptions, and data formats](./sensors_and_calibration)
 - [The ROS 1 URDF viewer for the AMR and its sensors](./utils/dataset_rosbag_viewer/ros1/urdf_viewer/README.md)
-- [The safety and productivity benchmark](./index.html)
+- [The safety and productivity benchmark](https://leon-schoenfeld.github.io/Multimodal_AMR_dataset/)
 - [Images of our documentation and a pdf version of the technical drawing of the sensor positions](./images)
 
 ## TL;DR

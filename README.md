@@ -90,7 +90,10 @@ The contributions of this dataset are as follows:
 - Challenging and diverse scenes in industrial indoor environments and in urban outdoor environments, including many edge cases and severe weather and lighting conditions.
 - We enable statistical evaluation of safety and productivity of AMRs in different modalities and domains.
 
-![train](./images/DocumentationImageTable.jpg) <br> Preview of the different modalities in the different domains, weather, and lighting conditions.
+<p align="center">
+  <img src="./images/DocumentationImageTable.jpg" width="800">
+  <br> Preview of the different modalities in the different domains, weather, and lighting conditions.
+</p>
 
 # Motivation
 
@@ -147,7 +150,10 @@ To view the AMR with the sensors, their coordinate systems, and the rosbag senso
 
 - [ROS 1 URDF viewer](./utils/dataset_rosbag_viewer/ros1/urdf_viewer/README.md)
 
-![AMR in RViz](./images/rviz.png) <br> Playing the Rosbag in RViz and visualizing the two laser scanners, the ToF 3D point cloud, the RGB image, thermal image, the AMR, and all coordinate systems.
+<p align="center">
+  <img src="./images/rviz.png" width="800">
+  <br> Playing the Rosbag in RViz and visualizing the two laser scanners, the ToF 3D point cloud, the RGB image, thermal image, the AMR, and all coordinate systems.
+</p>
 
 # Sensors and Calibration
 
@@ -199,7 +205,11 @@ The ToF camera timestamps have an offset, due to the long internal processing of
 The synchronization was validated by rotating heated resistors, that were visible in all modalities, except ultrasonic.
 The ultrasonic sensors were synchronized by approaching a wall with the reference distance from the ToF camera and laser scanners.
 
-![Time synchronization of the ros messages](./images/Synchronization.png) <br>
+<p align="center">
+  <img src="./images/Synchronization.png" width="800">
+  <br> Time synchronization of the ros messages.
+</p>
+
 Time synchronization of the ros messages of the different modalities. The dashed blue frame shows a time slot of 40ms where all sensors have published at least one message.
 If a sensors has several messages in the time frame, the message closest to the center of the time frame is chosen.
 

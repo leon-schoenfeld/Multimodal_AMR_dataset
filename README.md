@@ -330,8 +330,7 @@ SEW_Dataset/
         └── pub_4/
 
     The preceding-frame folders use the same modality layout with prefixes
-    `31`-`33`, `41`-`43`, `51`-`53`, `61`-`63`, `71`-`73`, and `81`-`83`, where
-    available. Only key-frames contain labels and calibration data.
+    31-33, 41-43, 51-53, 61-63, 71-73, and 81-83. Only key-frames contain labels.
 ```
 
 The radar `images/` directory contains azimuth, elevation, and Doppler images

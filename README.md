@@ -51,13 +51,7 @@ Before launching, adapt `base_dir` in [`config_sew.yaml`](./utils/SEW_Dataset_Vi
 python SEW_Dataset_viewer.py --config config_kitti.yaml
 ```
 
-Both configurations use KITTI-style calibration transformations such as `Tr_velo_to_cam` to project the point cloud into the camera views. The sensor coordinate systems and transformation layout are illustrated in the following figure.
-
-<p align="center">
-  <img src="./images/AMR_CoordinateTransform.png" width="800">
-</p>
-
-
+Both configurations use KITTI-style calibration transformations such as `Tr_velo_to_cam` to project the point cloud into the camera views.
 
 # Table of Contents
 
@@ -251,7 +245,11 @@ The dataset contains the following labels:
 - 4 vegetation (Only in 3D)
 - 5 curb (Only in 3D)
 
-The transformation of the 2D and 3D labels into the images and point clouds, as well as the projection of the point clouds and 3D labels into the images are shown in the [TL;DR](#tldr) section.
+The transformation of the 2D and 3D labels into the images and point clouds, as well as the projection of the point clouds and 3D labels into the images are shown in the following figure.
+
+<p align="center">
+  <img src="./images/AMR_CoordinateTransform.png" width="800">
+</p>
 
 ## 3D
 

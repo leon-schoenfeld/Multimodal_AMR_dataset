@@ -123,7 +123,9 @@ Since the perception of the AMR is not safe yet, they have to be accompanied by 
 One of the five AMRs is equipped with the sensor bracket in place of one of the containers and is therefore limited to deliveries with one container.
 The sensor bracket is described in the following.
 
-![EFEU AMR](./images/EFEU_AMR2.jpg) <br>
+<p align="center">
+  <img src="./images/EFEU_AMR2.jpg" alt="Synchronized multimodal sensor views from the SEW Multimodal AMR Dataset" width="800">
+</p>
 
 # Sensor Position and Rosbags
 

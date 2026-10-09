@@ -54,8 +54,10 @@ python SEW_Dataset_viewer.py --config config_kitti.yaml
 Both configurations use KITTI-style calibration transformations such as `Tr_velo_to_cam` to project the point cloud into the camera views. The sensor coordinate systems and transformation layout are illustrated in the following figure.
 
 <p align="center">
-  <img src="./images/AMR_CoordinateTransform.png">
+  <img src="./images/AMR_CoordinateTransform.png" width="800">
 </p>
+
+
 
 # Table of Contents
 

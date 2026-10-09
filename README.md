@@ -207,7 +207,6 @@ The ultrasonic sensors were synchronized by approaching a wall with the referenc
 
 <p align="center">
   <img src="./images/Synchronization.png" width="800">
-  <br> Time synchronization of the ros messages.
 </p>
 
 Time synchronization of the ros messages of the different modalities. The dashed blue frame shows a time slot of 40ms where all sensors have published at least one message.
@@ -252,8 +251,7 @@ The dataset contains the following labels:
 - 4 vegetation (Only in 3D)
 - 5 curb (Only in 3D)
 
-The transformation of the 2D and 3D labels into the images and point clouds, as well as the projection of the point clouds and 3D labels into the images are shown in the figure below:
-![Coordinate transformations](./images/AMR_CoordinateTransform.png) <br>
+The transformation of the 2D and 3D labels into the images and point clouds, as well as the projection of the point clouds and 3D labels into the images are shown in the [TL;DR](#tldr) section.
 
 ## 3D
 
